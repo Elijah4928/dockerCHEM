@@ -1,0 +1,7 @@
+FROM nvcr.io/nvidia/cuda:11.2.0-devel-ubuntu20.04
+
+RUN apt-get update
+RUN apt -y install python3-pip
+RUN pip install ml4chem
+RUN pip install graphdot
+RUN pip install rdkit-pypi
