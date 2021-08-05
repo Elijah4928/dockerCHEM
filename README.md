@@ -1,16 +1,11 @@
 # dockerCHEM
 dockerfile for ml4chem and graphdot python packages(available through pypi)
 
+#training.py -> ml4chem test file(fix dask distributed issues dependencies seem in order otherwise)
+-> this repo needs "data" folder with "miniset.cvs" file and "3D_generation" folder
+#graphtest.py -> graphdot test(gpu compatability issues with docker expect to be fixed when run through shifter, could also be pathing issues with cuda couldn't resolve)
 
+main.py -> builds intermediate python docker which users could run main.py(can omit and automate through main.py perhaps)
+-> also builds and pushes dockerfile to dockerhub to be pulled for shifter use
 
-#test.py
-Was writen in mind of goal of sending data to docker containers that would be used to retrain models, or send through existing ones
-Buildon after dockerfile build of ml4chem/graphdot and test is successful
-
-NOTE docker run -it --name.... for some reason doesn't like showing the packages/dependencies(python main.py -> after building in docker container, root:python --version results in command not found)
--> python main2.py
--> wait for dockerfile to build
--> $ exit
--> docker run -it installtest bash
--> $:src/
--> src folder in docker container now contains the files in which main.py was in
+can change from dockerhub elijahg/4928 to new one
