@@ -9,3 +9,6 @@ main.py -> builds intermediate python docker which users could run main.py(can o
 -> also builds and pushes dockerfile to dockerhub to be pulled for shifter use
 
 can change from dockerhub elijahg/4928 to new one
+
+
+edit main.py:dockerhub is elijah4928/temp
